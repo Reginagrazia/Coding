@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "561a16d8-656f-407d-8339-6c13ea901957",
+		"name": "API Automated test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36772593"
+	},
+	"item": [
+		{
+			"name": "Create Country",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/Create a new post\r",
+							"pm.test('Create a new post', async () => {\r",
+							"const response = await pm.request('Create a Post');\r",
+							"\r",
+							"// Check the status code\r",
+							"pm.expect(response.code).to.equal(201);\r",
+							"\r",
+							"// Check the response body\r",
+							"pm.expect(response.json()).to.have.property('name');\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": {\r\n            \"common\": \"South Georgia\",\r\n            \"official\": \"South Georgia and the South Sandwich Islands\",\r\n            \"nativeName\": {\r\n                \"eng\": {\r\n                    \"official\": \"South Georgia and the South Sandwich Islands\",\r\n                    \"common\": \"South Georgia\"\r\n                }\r\n            }\r\n        },\r\n        \"tld\": [\r\n            \".gs\"\r\n        ],\r\n        \"cca2\": \"GS\",\r\n        \"ccn3\": \"239\",\r\n        \"cca3\": \"SGS\",\r\n        \"independent\": false,\r\n        \"status\": \"officially-assigned\",\r\n        \"unMember\": false,\r\n        \"currencies\": {\r\n            \"SHP\": {\r\n                \"name\": \"Saint Helena pound\",\r\n                \"symbol\": \"£\"\r\n            }\r\n        },\r\n        \"idd\": {\r\n            \"root\": \"+5\",\r\n            \"suffixes\": [\r\n                \"00\"\r\n            ]\r\n        },\r\n        \"capital\": [\r\n            \"King Edward Point\"\r\n        ],\r\n        \"altSpellings\": [\r\n            \"GS\",\r\n            \"South Georgia and the South Sandwich Islands\"\r\n        ],\r\n        \"region\": \"Antarctic\",\r\n        \"languages\": {\r\n            \"eng\": \"English\"\r\n        },\r\n        \"translations\": {\r\n            \"ara\": {\r\n                \"official\": \"جورجيا الجنوبية وجزر ساندوتش الجنوبية\",\r\n                \"common\": \"جورجيا الجنوبية\"\r\n            },\r\n            \"bre\": {\r\n                \"official\": \"Georgia ar Su hag Inizi Sandwich ar Su\",\r\n                \"common\": \"Georgia ar Su hag Inizi Sandwich ar Su\"\r\n            },\r\n            \"ces\": {\r\n                \"official\": \"Jižní Georgie a Jižní Sandwichovy ostrovy\",\r\n                \"common\": \"Jižní Georgie a Jižní Sandwichovy ostrovy\"\r\n            },\r\n            \"cym\": {\r\n                \"official\": \"South Georgia and the South Sandwich Islands\",\r\n                \"common\": \"South Georgia\"\r\n            },\r\n            \"deu\": {\r\n                \"official\": \"Südgeorgien und die Südlichen Sandwichinseln\",\r\n                \"common\": \"Südgeorgien und die Südlichen Sandwichinseln\"\r\n            },\r\n            \"est\": {\r\n                \"official\": \"Lõuna-Georgia ja Lõuna-Sandwichi saared\",\r\n                \"common\": \"Lõuna-Georgia ja Lõuna-Sandwichi saared\"\r\n            },\r\n            \"fin\": {\r\n                \"official\": \"Etelä-Georgia ja Eteläiset Sandwichsaaret\",\r\n                \"common\": \"Etelä-Georgia ja Eteläiset Sandwichsaaret\"\r\n            },\r\n            \"fra\": {\r\n                \"official\": \"Géorgie du Sud et les îles Sandwich du Sud\",\r\n                \"common\": \"Géorgie du Sud-et-les Îles Sandwich du Sud\"\r\n            },\r\n            \"hrv\": {\r\n                \"official\": \"Južna Džordžija i Otoci Južni Sendvič\",\r\n                \"common\": \"Južna Georgija i otočje Južni Sandwich\"\r\n            },\r\n            \"hun\": {\r\n                \"official\": \"Déli-Georgia és Déli-Sandwich-szigetek\",\r\n                \"common\": \"Déli-Georgia és Déli-Sandwich-szigetek\"\r\n            },\r\n            \"ita\": {\r\n                \"official\": \"Georgia del Sud e isole Sandwich del Sud\",\r\n                \"common\": \"Georgia del Sud e Isole Sandwich Meridionali\"\r\n            },\r\n            \"jpn\": {\r\n                \"official\": \"サウスジョージア·サウスサンドウィッチ諸島\",\r\n                \"common\": \"サウスジョージア・サウスサンドウィッチ諸島\"\r\n            },\r\n            \"kor\": {\r\n                \"official\": \"조지아\",\r\n                \"common\": \"조지아\"\r\n            },\r\n            \"nld\": {\r\n                \"official\": \"Zuid-Georgië en de Zuidelijke Sandwich-eilanden\",\r\n                \"common\": \"Zuid-Georgia en Zuidelijke Sandwicheilanden\"\r\n            },\r\n            \"per\": {\r\n                \"official\": \"جزایر جورجیای جنوبی و ساندویچ جنوبی\",\r\n                \"common\": \"جزایر جورجیای جنوبی و ساندویچ جنوبی\"\r\n            },\r\n            \"pol\": {\r\n                \"official\": \"Georgia Południowa i Sandwich Południowy\",\r\n                \"common\": \"Georgia Południowa i Sandwich Południowy\"\r\n            },\r\n            \"por\": {\r\n                \"official\": \"Geórgia do Sul e Sandwich do Sul\",\r\n                \"common\": \"Ilhas Geórgia do Sul e Sandwich do Sul\"\r\n            },\r\n            \"rus\": {\r\n                \"official\": \"Южная Георгия и Южные Сандвичевы острова\",\r\n                \"common\": \"Южная Георгия и Южные Сандвичевы острова\"\r\n            },\r\n            \"slk\": {\r\n                \"official\": \"Južná Georgia a Južné Sandwichove ostrovy\",\r\n                \"common\": \"Južná Georgia a Južné Sandwichove ostrovy\"\r\n            },\r\n            \"spa\": {\r\n                \"official\": \"Georgia del Sur y las Islas Sandwich del Sur\",\r\n                \"common\": \"Islas Georgias del Sur y Sandwich del Sur\"\r\n            },\r\n            \"srp\": {\r\n                \"official\": \"Јужна Џорџија и Јужна Сендвичка Острва\",\r\n                \"common\": \"Јужна Џорџија и Јужна Сендвичка Острва\"\r\n            },\r\n            \"swe\": {\r\n                \"official\": \"Sydgeorgien\",\r\n                \"common\": \"Sydgeorgien\"\r\n            },\r\n            \"tur\": {\r\n                \"official\": \"Güney Georgia ve Güney Sandwich Adaları\",\r\n                \"common\": \"Güney Georgia ve Güney Sandwich Adaları\"\r\n            },\r\n            \"urd\": {\r\n                \"official\": \"جنوبی جارجیا و جزائر جنوبی سینڈوچ\",\r\n                \"common\": \"جنوبی جارجیا\"\r\n            },\r\n            \"zho\": {\r\n                \"official\": \"南乔治亚岛和南桑威奇群岛\",\r\n                \"common\": \"南乔治亚\"\r\n            }\r\n        },\r\n        \"latlng\": [\r\n            -54.5,\r\n            -37.0\r\n        ],\r\n        \"landlocked\": false,\r\n        \"area\": 3903.0,\r\n        \"demonyms\": {\r\n            \"eng\": {\r\n                \"f\": \"South Georgian South Sandwich Islander\",\r\n                \"m\": \"South Georgian South Sandwich Islander\"\r\n            }\r\n        },\r\n        \"flag\": \"🇬🇸\",\r\n        \"maps\": {\r\n            \"googleMaps\": \"https://goo.gl/maps/mJzdaBwKBbm2B81q9\",\r\n            \"openStreetMaps\": \"https://www.openstreetmap.org/relation/1983629\"\r\n        },\r\n        \"population\": 30,\r\n        \"car\": {\r\n            \"signs\": [\r\n                \"\"\r\n            ],\r\n            \"side\": \"right\"\r\n        },\r\n        \"timezones\": [\r\n            \"UTC-02:00\"\r\n        ],\r\n        \"continents\": [\r\n            \"Antarctica\"\r\n        ],\r\n        \"flags\": {\r\n            \"png\": \"https://flagcdn.com/w320/gs.png\",\r\n            \"svg\": \"https://flagcdn.com/gs.svg\"\r\n        },\r\n        \"coatOfArms\": {},\r\n        \"startOfWeek\": \"monday\",\r\n        \"capitalInfo\": {\r\n            \"latlng\": [\r\n                -54.28,\r\n                -36.5\r\n            ]\r\n        }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Countries",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Check if the status code is 200 (OK)\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							" \r",
+							"// Check if the response has at least one country\r",
+							"pm.test(\"Response has countries\", function () {\r",
+							"    // Parse the JSON response\r",
+							"    const jsonData = pm.response.json();\r",
+							" \r",
+							"// Check if the response is an array and has at least one element\r",
+							"    pm.expect(jsonData).to.be.an('array').and.to.have.lengthOf.at.least(1);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://restcountries.com/v3.1/all",
+					"protocol": "https",
+					"host": [
+						"restcountries",
+						"com"
+					],
+					"path": [
+						"v3.1",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a Country",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response property matches environment variable\", function () {\r",
+							"  pm.expect(pm.response.json().cca2).to.eql(pm.environment.get(\"US\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response property matches environment variable\", function () {\r",
+							"  pm.expect(pm.response.json().cca2).to.eql(pm.environment.get(\"DE\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response property matches environment variable\", function () {\r",
+							"  pm.expect(pm.response.json().cca2).to.eql(pm.environment.get(\"GB\"));\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://restcountries.com/v3.1/alpha/{{$randomCountryCode}}",
+					"protocol": "https",
+					"host": [
+						"restcountries",
+						"com"
+					],
+					"path": [
+						"v3.1",
+						"alpha",
+						"{{$randomCountryCode}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
